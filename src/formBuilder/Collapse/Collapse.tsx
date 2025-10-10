@@ -6,7 +6,7 @@ import classnames from 'classnames';
 const useStyles = createUseStyles({
   collapseElement: {
     '& .disabled': { '.toggle-collapse': { cursor: 'default' } },
-      backgroundColor: 'gray',
+    backgroundColor: 'gray',
     '& h4': {
       display: 'flex',
       alignItems: 'center',
@@ -108,7 +108,12 @@ const Collapse: FC<CollapseProps> = (props) => {
   );
 
   return (
-    <div className={classes} style={{backgroundColor: props.backgroundColor ? props.backgroundColor : ''}}>
+    <div
+      className={classes}
+      style={{
+        backgroundColor: props.backgroundColor ? props.backgroundColor : '',
+      }}
+    >
       <div
         className='d-flex'
         onClick={(event) => {
@@ -124,7 +129,7 @@ const Collapse: FC<CollapseProps> = (props) => {
         </span>
         <h4>{props.title}</h4>
       </div>
-      <RSCollapse isOpen={props.isOpen}>
+      <RSCollapse style={{ visibility: 'visible' }} isOpen={props.isOpen}>
         <div>{props.children}</div>
       </RSCollapse>
     </div>
