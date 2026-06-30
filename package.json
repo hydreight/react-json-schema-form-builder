@@ -1,6 +1,6 @@
 {
   "name": "@hydreight/react-json-schema-form-builder",
-  "version": "2.2.6",
+  "version": "2.3.0",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
