@@ -31,6 +31,7 @@
   "scripts": {
     "clean": "rimraf node_modules coverage dist",
     "build": "rollup --bundleConfigAsCjs -c rollup.config.js",
+    "prepublishOnly": "npm run build",
     "watch": "rollup --bundleConfigAsCjs -w -c rollup.config.js",
     "prettier": "prettier -w src",
     "test": "run-s test:unit test:prettier test:lint test:ts",
