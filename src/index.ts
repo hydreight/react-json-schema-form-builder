@@ -7,12 +7,6 @@ import {
   generateSchemaFromElementProps,
   generateUiSchemaFromElementProps,
   generateCategoryHash,
-  getCardCategory,
-  getCardBody,
-  parse,
-  stringify,
-  getRandomId,
-  DEFAULT_INPUT_NAME,
 } from './formBuilder/utils';
 
 export type {
@@ -28,17 +22,13 @@ export {
   PredefinedGallery,
   addCardObj,
   addSectionObj,
-  // Lower-level conversion utilities — let consumers build a custom builder UI
-  // on top of the same battle-tested RJSF schema/uiSchema round-trip engine
-  // (handles widgets, formats, expectedAnswer, and dependencies).
+  // The schema <-> element conversion engine — lets consumers build a custom
+  // builder UI on top of the same battle-tested RJSF schema/uiSchema round-trip
+  // (handles widgets, formats, expectedAnswer, and dependencies). Pair
+  // generateElementPropsFromSchemas (with generateCategoryHash) for parsing with
+  // generateSchema/UiSchemaFromElementProps for serializing.
   generateElementPropsFromSchemas,
   generateSchemaFromElementProps,
   generateUiSchemaFromElementProps,
   generateCategoryHash,
-  getCardCategory,
-  getCardBody,
-  parse,
-  stringify,
-  getRandomId,
-  DEFAULT_INPUT_NAME,
 };
